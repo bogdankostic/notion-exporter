@@ -29,7 +29,7 @@ dependencies = [
 ]
 
 [project.urls]
-"GitHub: repo" = "https://github.com/deepset-ai/haystack"
+"GitHub" = "https://github.com/bogdankostic/notion-exporter"
 
 [tool.hatch.version]
 path = "VERSION.txt"
