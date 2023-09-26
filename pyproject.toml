@@ -1,0 +1,53 @@
+[build-system]
+requires = [
+  "hatchling>=1.8.0",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "notion-exporter"
+dynamic = [
+  "version",
+]
+description = "Tool that allows you to export your Notion pages to markdown files."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.8"
+authors = [
+  { name = "Bogdan Kostić", email = "bogdankostic@web.de" },
+]
+keywords = [
+    "Notion",
+    "Notion-API",
+    "Notion-Export",
+    "Notion-Extraction"
+]
+dependencies = [
+    "notion-client",
+    "tenacity",
+    "notion2md",
+]
+
+[project.urls]
+"GitHub: repo" = "https://github.com/deepset-ai/haystack"
+
+[tool.hatch.version]
+path = "VERSION.txt"
+pattern = "(?P<version>.+)"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/notion_exporter",
+  "/VERSION.txt",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = [
+  "notion_exporter",
+]
+
+[tool.black]
+line-length = 120
