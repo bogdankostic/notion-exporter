@@ -15,6 +15,9 @@ pip install notion-exporter
 
 ## Usage
 
+To use this package, you will need a Notion API token. You can follow the steps outlined in the [Notion documentation](https://developers.notion.com/docs/create-a-notion-integration#create-your-integration-in-notion) 
+to create a new Notion integration, connect it to your pages, and obtain your API token.
+
 ```python
 from notion_exporter import NotionExporter
 
